@@ -2,6 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1.2rem;
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: var(--gray-500);
@@ -10,11 +11,12 @@
   border-radius: 8px;
   padding: 2rem;
   padding-bottom: 3.2rem;
+  margin-top: 1.2rem;
 }
 
 .task .content,
 .task .contentChecked {
-  margin: 0 1.2rem;
+  flex: 1;
 }
 
 .task .contentChecked {
@@ -71,6 +73,7 @@ label {
   border-radius: 50%;
   z-index: -1;
   border: 2px solid var(--blue-400);
+  transition: background-color 0.2s;
 }
 
 .check input[type='checkbox']:not(:checked) + .labelCheck svg {

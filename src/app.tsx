@@ -1,5 +1,5 @@
 // Components
-import { Header, NewTask, Tasks } from 'components';
+import { Header, TaskList } from 'components';
 
 // Styles
 import styles from 'app.module.css';
@@ -10,9 +10,8 @@ const App = () => {
     <>
       <Header />
       <div className={styles.container}>
-        <NewTask />
         <main>
-          <Tasks />
+          <TaskList />
         </main>
       </div>
     </>
