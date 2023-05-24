@@ -1,0 +1,83 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 3.2rem;
+}
+
+.task .content,
+.task .contentChecked {
+  margin: 0 1.2rem;
+}
+
+.task .contentChecked {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.task .delete {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+  transition: color 0.1s;
+}
+
+.task .delete:hover {
+  color: var(--red-400);
+}
+
+.check {
+  position: relative;
+}
+
+.check input[type='checkbox'] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.check .labelCheck {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 9999;
+  padding-top: 4px;
+  padding-left: 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.check .labelCheck:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  z-index: -1;
+  border: 2px solid var(--blue-400);
+}
+
+.check input[type='checkbox']:not(:checked) + .labelCheck svg {
+  opacity: 0;
+}
+
+.check input[type='checkbox']:checked + .labelCheck:before {
+  border: 1px solid var(--purple-800);
+  background-color: var(--purple-800);
+}
